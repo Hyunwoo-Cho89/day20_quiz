@@ -17,6 +17,7 @@ public class MS_MainClass {
 		int kor;
 		int eng;
 		int mat;
+		int avg;
 		String grade;
 		int select;
 		
@@ -38,12 +39,7 @@ public class MS_MainClass {
 					
 					MemberShip fc = (MemberShip)oos.readObject();
 				
-					System.out.println("학번 : "+fc.getNum());
-					System.out.println("이름 : "+fc.getName());
-					System.out.println("국어 : "+fc.getKor());
-					System.out.println("영어 : "+fc.getEng());
-					System.out.println("수학 : "+fc.getMat());
-					System.out.println("등급 : "+fc.getGrade());
+					fc.print();
 					
 					oos.close(); bos.close(); fos.close();
 					
@@ -71,8 +67,16 @@ public class MS_MainClass {
 					eng = sc.nextInt();
 					System.out.print("수학점수 입력 : ");
 					mat = sc.nextInt();
-					System.out.print("등급 입력 : ");
-					grade = sc.next();
+					avg = (kor+eng+mat)/3;
+					if(avg>=90) {
+						grade = (String)"A";
+					}else if(avg<90 && avg>=80) {
+						grade = (String)"B";
+					}else if(avg<80 && avg>=70) {
+						grade = (String)"C";
+					}else if(avg<70 && avg>=60) {
+						grade = (String)"D";
+					}else grade = (String)"F";
 					
 					member.setNum(num);
 					member.setName(name);
@@ -89,7 +93,8 @@ public class MS_MainClass {
 					oos.writeObject(member);
 					
 					oos.close(); bos.close(); fos.close();
-					System.out.println("파일로 저장 되었습니다.");
+					
+					System.out.println("학생정보가 저장 되었습니다.");
 				}
 				
 				break;

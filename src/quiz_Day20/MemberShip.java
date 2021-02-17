@@ -1,5 +1,8 @@
 package quiz_Day20;
 
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class MemberShip implements Serializable{
@@ -43,7 +46,9 @@ public class MemberShip implements Serializable{
 		return grade;
 	}
 	public void setGrade(String grade) {
-		this.grade = grade;
+
+			this.grade = grade;
+
 	}
 	
 	public void print() {
