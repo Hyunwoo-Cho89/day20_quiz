@@ -6,17 +6,17 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 public class MemberShip implements Serializable{
-	private String num;
+	private String stNum;
 	private String name;
 	private int kor;
 	private int eng;
 	private int mat;
 	private String grade;
-	public String getNum() {
-		return num;
+	public String getstNum() {
+		return stNum;
 	}
-	public void setNum(String num) {
-		this.num = num;
+	public void setstNum(String stNum) {
+		this.stNum = stNum;
 	}
 	public String getName() {
 		return name;
@@ -52,7 +52,7 @@ public class MemberShip implements Serializable{
 	}
 	
 	public void print() {
-		System.out.println("학번 : "+num);
+		System.out.println("학번 : "+stNum);
 		System.out.println("이름 : "+name);
 		System.out.println("국어 : "+kor);
 		System.out.println("영어 : "+eng);
