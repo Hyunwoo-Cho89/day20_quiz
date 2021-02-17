@@ -35,15 +35,15 @@ public class MS_MainClass {
 				stNum = sc.next();
 				File path = new File("C://Users//Hyunwoo//Desktop//KG자료//새 폴더//"+stNum+".txt");
 				if(path.exists()) {
-					FileInputStream fis = new FileInputStream(path);
-					BufferedInputStream bis = new BufferedInputStream(fis);
-					ObjectInputStream ois = new ObjectInputStream(bis);
+					FileInputStream fos = new FileInputStream(path);
+					BufferedInputStream bos = new BufferedInputStream(fos);
+					ObjectInputStream oos = new ObjectInputStream(bos);
 					
-					MemberShip fc = (MemberShip)ois.readObject();
+					MemberShip fc = (MemberShip)oos.readObject();
 				
 					fc.print();
 					
-					ois.close(); bis.close(); fis.close();
+					oos.close(); bos.close(); fos.close();
 					
 				}else {
 					System.out.println("해당 학생은 존재하지 않습니다.");
