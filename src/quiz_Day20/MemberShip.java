@@ -54,7 +54,7 @@ public class MemberShip implements Serializable{
 	public void print() {
 		System.out.println("학번 : "+num);
 		System.out.println("이름 : "+name);
-		System.out.println("국어 : "+num);
+		System.out.println("국어 : "+kor);
 		System.out.println("영어 : "+eng);
 		System.out.println("수학 : "+mat);
 		System.out.println("등급 : "+grade);

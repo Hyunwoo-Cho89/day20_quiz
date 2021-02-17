@@ -100,6 +100,7 @@ public class MS_MainClass {
 				break;
 			case 3: 
 				System.out.println("프로그램을 종료합니다.");
+				
 				return;
 			default : 
 				System.out.println("잘못 누르셨습니다. 다시!!");
